@@ -1,0 +1,49 @@
+show databases;
+
+create database webforum;
+
+use webforum;
+
+create table user(
+userid varchar(25) primary key,
+useremail varchar(25) unique,
+username varchar(25),
+userpass varchar(25)
+);
+
+select * from user;
+
+insert into user values("test@test.com","test@test.com","test","1234");
+insert into user values("test1@test.com","test1@test.com","test1","1234");
+
+select * from user;
+
+create table post
+(
+postid int primary key auto_increment,
+posttitle varchar(100),
+postcontent varchar(2000),
+postdate varchar(50),
+postcategory varchar(25),
+postby varchar(25)
+);
+
+select * from post;
+
+
+create table comment
+(
+commentid int primary key auto_increment,
+commentpostid int,
+commentcontent varchar(2000),
+commentdate varchar(50),
+commentby varchar(25)
+);
+
+select * from comment;
+
+
+select * from comment;
+
+
+
